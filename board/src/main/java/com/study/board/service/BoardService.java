@@ -7,14 +7,15 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.Optional;
 
 @Service
 public class BoardService {
     @Autowired
     private BoardRepository boardRepository;
-    public void write(Board board){
+    public Integer write(Board board){
         boardRepository.save(board);
+        return board.getId();
     }
 
     public void delete(Integer id){
@@ -23,7 +24,6 @@ public class BoardService {
 
     public void update(Board board){
     }
-
 
     public Page<Board> boardList(Pageable pageable){
         return boardRepository.findAll(pageable);
