@@ -12,7 +12,7 @@ import java.util.Date;
 
 @Service
 public class SecurityService {
-    private static final String SECRET_KEY = "asdfggsdggwegwegwehasdfsdfasdfdsaf";
+    private static final String SECRET_KEY = "asdfggsdggkljhlkjhcjbkwegwegwehasdfsdfasdfdsasdfasasdfasdfsadfasdff";
 
     public String createToken(String subject, long expTime){
         if(expTime <= 0){
